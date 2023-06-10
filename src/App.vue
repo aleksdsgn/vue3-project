@@ -1,7 +1,11 @@
 <template>
   <div class="app">
-    <post-form/>
-    <post-list :posts="posts"/>
+    <post-form
+      @create="createPost"
+    />
+    <post-list
+      :posts="posts"
+    />
   </div>
 </template>
 
@@ -22,8 +26,8 @@ export default {
     }
   },
   methods: {
-    createPost() {
-      
+    createPost(post) {
+      this.posts.push(post);
     },
   }
 }
