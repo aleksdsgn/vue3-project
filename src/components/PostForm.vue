@@ -19,6 +19,8 @@
 </template>
 
 <script>
+import { on } from 'events'
+
 export default {
   data() {
     return {
@@ -37,7 +39,7 @@ export default {
         body: ''
       }
     }
-  }
+  },
 }
 </script>
 
